@@ -1,11 +1,11 @@
-import type { InputMode } from '../../hooks/useInputMode';
+export type AppTab = 'simple' | 'canvas' | 'materials';
 
 interface HeaderProps {
-  mode: InputMode;
-  onModeChange: (mode: InputMode) => void;
+  tab: AppTab;
+  onTabChange: (tab: AppTab) => void;
 }
 
-export function Header({ mode, onModeChange }: HeaderProps) {
+export function Header({ tab, onTabChange }: HeaderProps) {
   return (
     <header className="bg-amber-900 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -19,9 +19,9 @@ export function Header({ mode, onModeChange }: HeaderProps) {
 
         <nav className="flex gap-1 bg-amber-950/40 rounded-lg p-1">
           <button
-            onClick={() => onModeChange('simple')}
+            onClick={() => onTabChange('simple')}
             className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-              mode === 'simple'
+              tab === 'simple'
                 ? 'bg-white text-amber-900'
                 : 'text-amber-200 hover:text-white hover:bg-amber-800/50'
             }`}
@@ -29,14 +29,24 @@ export function Header({ mode, onModeChange }: HeaderProps) {
             Form Input
           </button>
           <button
-            onClick={() => onModeChange('canvas')}
+            onClick={() => onTabChange('canvas')}
             className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-              mode === 'canvas'
+              tab === 'canvas'
                 ? 'bg-white text-amber-900'
                 : 'text-amber-200 hover:text-white hover:bg-amber-800/50'
             }`}
           >
             Draw Deck
+          </button>
+          <button
+            onClick={() => onTabChange('materials')}
+            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              tab === 'materials'
+                ? 'bg-white text-amber-900'
+                : 'text-amber-200 hover:text-white hover:bg-amber-800/50'
+            }`}
+          >
+            My Materials
           </button>
         </nav>
       </div>
