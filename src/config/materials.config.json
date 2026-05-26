@@ -1,0 +1,80 @@
+{
+  "deckingBoard": {
+    "nominalWidth_in": 6,
+    "actualWidth_in": 5.5,
+    "nominalThickness": "5/4",
+    "lengthOptions_ft": [8, 10, 12, 14, 16],
+    "defaultLength_ft": 12,
+    "gapBetweenBoards_in": 0.125,
+    "wasteFactor": 0.10
+  },
+  "joists": {
+    "size": "2x8",
+    "actualThickness_in": 1.5,
+    "actualDepth_in": 7.25,
+    "spacing_in": 16,
+    "lengthOptions_ft": [8, 10, 12, 14, 16]
+  },
+  "rimJoist": {
+    "size": "2x8",
+    "lengthOptions_ft": [8, 10, 12, 14, 16]
+  },
+  "ledger": {
+    "size": "2x8",
+    "boltSpacing_in": 16
+  },
+  "beams": {
+    "spanTable": [
+      { "maxSpan_ft": 6,  "size": "3-2x8"  },
+      { "maxSpan_ft": 8,  "size": "3-2x10" },
+      { "maxSpan_ft": 10, "size": "3-2x12" },
+      { "maxSpan_ft": 12, "size": "4-2x12" }
+    ],
+    "defaultPostSpacing_ft": 8,
+    "lengthOptions_ft": [10, 12, 14, 16]
+  },
+  "posts": {
+    "size": "6x6",
+    "embedDepth_ft": 3.5,
+    "lengthOptions_ft": [8, 10, 12, 14, 16]
+  },
+  "footings": {
+    "diameter_in": 12,
+    "bagsPerFooting_80lb": 2,
+    "extraBagsPerFtDepth": 0.5,
+    "baselineDepth_ft": 2.0
+  },
+  "railing": {
+    "postSleeveSpacing_ft": 6,
+    "balusterSpacing_in": 4,
+    "balusterWidth_in": 1.5,
+    "railHeight_in": 36,
+    "stockLength_ft": 8,
+    "requiresRailingAbove_in": 30
+  },
+  "stairs": {
+    "maxRiserHeight_in": 7.75,
+    "minRiserHeight_in": 4.0,
+    "targetRiserHeight_in": 7.5,
+    "treadDepth_in": 11.0,
+    "defaultWidth_ft": 4.0,
+    "stringerCount": 3,
+    "stringer_size": "2x12",
+    "stringer_lengthOptions_ft": [10, 12, 14, 16],
+    "tread_size": "2x6",
+    "treadBoardsPerTread": 2,
+    "riser_size": "1x8",
+    "includeRisers": true,
+    "wasteFactor": 0.05
+  },
+  "hardware": {
+    "screwsPerSqFt_lbs": 0.05,
+    "joistHangersPerJoist": 2,
+    "postBasesPerPost": 1,
+    "postBaseSku": "ABA66",
+    "beamCapPerPost": 1,
+    "beamCapSku": "BC6",
+    "ledgerBoltSpacing_in": 16,
+    "railingPostLagScrews": 2
+  }
+}
