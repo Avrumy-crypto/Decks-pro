@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/Decks-pro/',
+  base: process.env.NODE_ENV === 'production' ? '/Decks-pro/' : '/',
   plugins: [react(), tailwindcss()],
   test: {
     environment: 'node',
