@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="93" fill="#FFC500" stroke="#111111" stroke-width="10"/>
+  <text x="100" y="92" text-anchor="middle" dominant-baseline="central"
+        font-family="'Arial Black','Impact',sans-serif" font-size="74" font-weight="900" fill="#111111">44</text>
+  <text x="100" y="148" text-anchor="middle"
+        font-family="'Arial Black','Arial',sans-serif" font-size="19" font-weight="900" fill="#111111" letter-spacing="2">FOUR&#x2715;FOUR</text>
+  <text x="100" y="170" text-anchor="middle"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#111111" letter-spacing="5">DECKS</text>
+</svg>
