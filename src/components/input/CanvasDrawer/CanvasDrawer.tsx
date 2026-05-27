@@ -107,21 +107,21 @@ export function CanvasDrawer({ onChange, height_ft, onHeightChange }: CanvasDraw
       <div className="flex flex-wrap items-center gap-2">
         <button
           onClick={() => { reset(); setMode('drawing'); }}
-          className={`px-3 py-1.5 rounded text-sm font-medium border transition-colors ${mode === 'drawing' && !isClosed ? 'bg-amber-600 text-white border-amber-600' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
+          className={`px-3 py-1.5 rounded text-sm font-medium border transition-colors ${mode === 'drawing' && !isClosed ? 'bg-yellow-400 text-black border-yellow-400' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
         >
           Draw
         </button>
         <button
           onClick={() => setMode('editing')}
           disabled={!isClosed}
-          className={`px-3 py-1.5 rounded text-sm font-medium border transition-colors disabled:opacity-40 ${mode === 'editing' ? 'bg-amber-600 text-white border-amber-600' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
+          className={`px-3 py-1.5 rounded text-sm font-medium border transition-colors disabled:opacity-40 ${mode === 'editing' ? 'bg-yellow-400 text-black border-yellow-400' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
         >
           Edit Shape
         </button>
         <button
           onClick={() => setMode('addStairs')}
           disabled={!isClosed}
-          className={`px-3 py-1.5 rounded text-sm font-medium border transition-colors disabled:opacity-40 ${mode === 'addStairs' ? 'bg-amber-600 text-white border-amber-600' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
+          className={`px-3 py-1.5 rounded text-sm font-medium border transition-colors disabled:opacity-40 ${mode === 'addStairs' ? 'bg-yellow-400 text-black border-yellow-400' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
         >
           Add Stairs
         </button>
@@ -188,10 +188,10 @@ export function CanvasDrawer({ onChange, height_ft, onHeightChange }: CanvasDraw
             {points.length > 0 && (
               <Line
                 points={rubberPoints}
-                stroke={isClosed ? '#92400e' : '#d97706'}
+                stroke={isClosed ? '#111111' : '#FFC500'}
                 strokeWidth={2}
                 closed={isClosed}
-                fill={isClosed ? 'rgba(180,83,9,0.12)' : undefined}
+                fill={isClosed ? 'rgba(255,197,0,0.15)' : undefined}
                 dash={isClosed ? undefined : [6, 3]}
               />
             )}
@@ -223,7 +223,7 @@ export function CanvasDrawer({ onChange, height_ft, onHeightChange }: CanvasDraw
                   y={ftToPx(cy, scale) - 10}
                   text={`${area_sqft.toFixed(0)} sq ft`}
                   fontSize={12}
-                  fill="#92400e"
+                  fill="#111111"
                   fontStyle="bold"
                 />
               );
@@ -259,7 +259,7 @@ export function CanvasDrawer({ onChange, height_ft, onHeightChange }: CanvasDraw
                 y={ftToPx(p.y, scale)}
                 radius={6}
                 fill="white"
-                stroke="#92400e"
+                stroke="#111111"
                 strokeWidth={2}
                 draggable
                 onDragEnd={e => handleDragEnd(i, e)}
@@ -272,7 +272,7 @@ export function CanvasDrawer({ onChange, height_ft, onHeightChange }: CanvasDraw
                 x={ftToPx(p.x, scale)}
                 y={ftToPx(p.y, scale)}
                 radius={4}
-                fill="#d97706"
+                fill="#FFC500"
               />
             ))}
 
@@ -294,7 +294,7 @@ export function CanvasDrawer({ onChange, height_ft, onHeightChange }: CanvasDraw
         <span>Area: <strong>{area_sqft.toFixed(1)} sq ft</strong></span>
         <span>Perimeter: <strong>{perimeter_lf.toFixed(1)} lf</strong></span>
         {!isClosed && points.length > 0 && (
-          <span className="text-amber-600 font-medium">Click starting point (green) to close shape</span>
+          <span className="text-yellow-600 font-medium">Click starting point (green) to close shape</span>
         )}
         {isClosed && (
           <span className="text-green-600 font-medium">Shape complete — BOM calculated below</span>

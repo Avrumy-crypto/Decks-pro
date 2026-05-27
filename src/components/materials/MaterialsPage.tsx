@@ -106,8 +106,8 @@ function LengthChips({
               onClick={() => toggle(len)}
               className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
                 active
-                  ? 'bg-amber-700 text-white border-amber-700'
-                  : 'bg-white text-gray-500 border-gray-300 hover:border-amber-400 hover:text-amber-700'
+                  ? 'bg-yellow-400 text-black border-yellow-400'
+                  : 'bg-white text-gray-500 border-gray-300 hover:border-yellow-400 hover:text-black'
               }`}
             >
               {len}'
@@ -125,7 +125,7 @@ function LengthChips({
           min={1}
           max={40}
           step={0.5}
-          className="w-40 text-sm border border-gray-300 rounded-md px-2 py-1 focus:border-amber-500 focus:ring-amber-500"
+          className="w-40 text-sm border border-gray-300 rounded-md px-2 py-1 focus:border-yellow-400 focus:ring-yellow-400"
         />
         <button
           onClick={addCustom}
@@ -191,7 +191,7 @@ export function MaterialsPage({ overrides, onUpdateCategory, onResetAll }: Mater
                 <div className="flex items-center gap-2">
                   <h3 className="font-semibold text-gray-900">{section.label}</h3>
                   {isCustomized && (
-                    <span className="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-medium">
+                    <span className="text-xs bg-yellow-100 text-black px-2 py-0.5 rounded-full font-medium">
                       Customized
                     </span>
                   )}
@@ -229,7 +229,7 @@ export function MaterialsPage({ overrides, onUpdateCategory, onResetAll }: Mater
         );
       })}
 
-      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-800">
+      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-900">
         <strong>How this works:</strong> When the calculator picks a board length, it always
         chooses the shortest length from your list that fits the required size. If no length fits,
         it uses the longest available. Changes save automatically.

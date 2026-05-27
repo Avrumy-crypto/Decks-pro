@@ -93,7 +93,7 @@ export default function App() {
                       : 'Draw your deck shape on the canvas to see your material list'}
                   </p>
                   <p className="text-xs text-gray-400 mt-2">
-                    Using materials from your catalog — <button onClick={() => setTab('materials')} className="underline text-amber-600 hover:text-amber-800">manage in My Materials</button>
+                    Using materials from your catalog — <button onClick={() => setTab('materials')} className="underline text-yellow-600 hover:text-yellow-800">manage in My Materials</button>
                   </p>
                 </div>
               )}

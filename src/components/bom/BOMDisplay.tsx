@@ -7,7 +7,7 @@ interface BOMDisplayProps {
 }
 
 const CATEGORY_COLORS: Record<BOMCategory, string> = {
-  'surface': 'bg-amber-50 border-amber-200',
+  'surface': 'bg-yellow-50 border-yellow-300',
   'framing': 'bg-sky-50 border-sky-200',
   'beams-posts': 'bg-indigo-50 border-indigo-200',
   'footings': 'bg-stone-50 border-stone-200',
@@ -17,7 +17,7 @@ const CATEGORY_COLORS: Record<BOMCategory, string> = {
 };
 
 const CATEGORY_HEADER_COLORS: Record<BOMCategory, string> = {
-  'surface': 'bg-amber-100 text-amber-900',
+  'surface': 'bg-yellow-400 text-black',
   'framing': 'bg-sky-100 text-sky-900',
   'beams-posts': 'bg-indigo-100 text-indigo-900',
   'footings': 'bg-stone-100 text-stone-900',
@@ -45,8 +45,8 @@ export function BOMDisplay({ bom }: BOMDisplayProps) {
 
   return (
     <div className="space-y-4">
-      <div className="bg-white rounded-lg border border-gray-200 p-4">
-        <h3 className="font-semibold text-gray-900 mb-3">Project Summary</h3>
+      <div className="bg-black rounded-lg border border-gray-800 p-4">
+        <h3 className="font-bold text-yellow-400 mb-3 uppercase tracking-wide text-sm">Project Summary</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
             { label: 'Area', value: `${bom.inputSummary.area_sqft} sq ft` },
@@ -54,13 +54,13 @@ export function BOMDisplay({ bom }: BOMDisplayProps) {
             { label: 'Height', value: `${bom.inputSummary.height_ft} ft` },
             { label: 'Stair Runs', value: bom.inputSummary.stairRuns.toString() },
           ].map(({ label, value }) => (
-            <div key={label} className="bg-gray-50 rounded-md p-3 text-center">
-              <div className="text-xs text-gray-500 uppercase tracking-wide">{label}</div>
-              <div className="font-bold text-gray-900 mt-1">{value}</div>
+            <div key={label} className="bg-gray-900 rounded-md p-3 text-center border border-gray-700">
+              <div className="text-xs text-gray-400 uppercase tracking-wide">{label}</div>
+              <div className="font-bold text-yellow-400 mt-1">{value}</div>
             </div>
           ))}
         </div>
-        <div className="mt-3 text-xs text-gray-400">
+        <div className="mt-3 text-xs text-gray-500">
           Total line items: {bom.lines.length} &bull; Generated: {new Date(bom.generatedAt).toLocaleTimeString()}
         </div>
       </div>
@@ -77,7 +77,7 @@ export function BOMDisplay({ bom }: BOMDisplayProps) {
             >
               <span>{CATEGORY_LABELS[cat] ?? cat}</span>
               <span className="flex items-center gap-2">
-                <span className="bg-white/60 rounded px-2 py-0.5 text-xs font-medium">{lines.length} items</span>
+                <span className="bg-black/10 rounded px-2 py-0.5 text-xs font-medium">{lines.length} items</span>
                 <span>{isOpen ? '▲' : '▼'}</span>
               </span>
             </button>

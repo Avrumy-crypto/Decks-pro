@@ -82,7 +82,7 @@ export function ExportPanel({ bom, rawInput }: ExportPanelProps) {
           onClick={handleSend}
           disabled={sending}
           className={`px-4 py-2 rounded-md text-sm font-medium transition-colors disabled:opacity-60 ${
-            sent ? 'bg-green-600 text-white' : 'bg-amber-700 text-white hover:bg-amber-800'
+            sent ? 'bg-green-600 text-white' : 'bg-yellow-400 text-black hover:bg-yellow-500'
           }`}
         >
           {sending ? 'Sending...' : sent ? 'Sent!' : 'Send to Pricing App'}
